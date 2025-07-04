@@ -1,0 +1,58 @@
+# ==========================
+# Global
+# ==========================
+.env
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Contact.Management (.NET)
+# ==========================
+Contact.Management/**/bin/
+Contact.Management/**/obj/
+Contact.Management/.vs/
+Contact.Management/*.user
+Contact.Management/*.suo
+Contact.Management/*.dbmdl
+Contact.Management/*.db
+Contact.Management/**/*.cache
+
+# Rider / JetBrains
+Contact.Management/.idea/
+
+# NuGet packages
+**/packages/
+*.nupkg
+
+# Visual Studio Code
+.vscode/
+
+# ==========================
+# Frontend (React)
+# ==========================
+Contact-Management-App/node_modules/
+Contact-Management-App/.env.local
+Contact-Management-App/.env.development.local
+Contact-Management-App/.env.production.local
+Contact-Management-App/.eslintcache
+
+# Yarn / npm
+Contact-Management-App/yarn.lock
+Contact-Management-App/package-lock.json
+
+# ==========================
+# Logs and Coverage
+# ==========================
+**/logs/
+**/coverage/
+**/coverage-final.json
+**/nyc_output/
+**/.cache/
+
+# ==========================
+# Build outputs
+# ==========================
+**/dist/
+**/build/

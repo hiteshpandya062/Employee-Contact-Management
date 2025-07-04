@@ -1,15 +1,13 @@
-using Contact.Management.Core.Interfaces;
+using Contact.Management.API.Extensions;
 using Contact.Management.Infrastructure.Data;
-using Contact.Management.Infrastructure.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
+builder.Services.AddApplicationServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

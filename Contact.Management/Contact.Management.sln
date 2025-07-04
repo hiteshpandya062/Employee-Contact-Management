@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Management.API", "Contact.Management.API\Contact.Management.API.csproj", "{73EB90D9-A007-49E3-82A9-1F4447CB49C7}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Management.Core", "Contact.Management.Core\Contact.Management.Core.csproj", "{3EC2B2C5-4A6F-460B-A824-B5972CB8FCC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Management.Infrastructure", "Contact.Management.Infrastructure\Contact.Management.Infrastructure.csproj", "{AC9AA74E-6122-4137-A637-CF0B20823F67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Management.Shared", "Contact.Management.Shared\Contact.Management.Shared.csproj", "{5F94292A-2A94-47F7-84BF-97745430B4E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AC9AA74E-6122-4137-A637-CF0B20823F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC9AA74E-6122-4137-A637-CF0B20823F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC9AA74E-6122-4137-A637-CF0B20823F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F94292A-2A94-47F7-84BF-97745430B4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F94292A-2A94-47F7-84BF-97745430B4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F94292A-2A94-47F7-84BF-97745430B4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F94292A-2A94-47F7-84BF-97745430B4E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

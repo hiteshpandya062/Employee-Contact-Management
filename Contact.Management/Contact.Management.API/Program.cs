@@ -10,11 +10,25 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 builder.Services.AddApplicationServices();
 
 builder.Services.AddControllers();
+
+// Add Cors Policy to allow all Origin
+builder.Services.AddCors(op =>
+{
+    op.AddDefaultPolicy(policy =>
+    {
+        policy
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseCors();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

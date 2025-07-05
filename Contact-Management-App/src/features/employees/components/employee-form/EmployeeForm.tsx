@@ -45,7 +45,7 @@ export const EmployeeForm: React.FC<IEmployeeFormProps> = ({ employee, companies
 
                     return (
                         <Form className="p-fluid grid gap-3">
-                            <div className="col-12 md:col-6">
+                            <div className="col-12">
                                 <label htmlFor="name">Name</label>
                                 <InputText
                                     id="name"
@@ -60,7 +60,7 @@ export const EmployeeForm: React.FC<IEmployeeFormProps> = ({ employee, companies
                                 )}
                             </div>
 
-                            <div className="col-12 md:col-6">
+                            <div className="col-12">
                                 <label htmlFor="email">Email</label>
                                 <InputText
                                     id="email"
@@ -78,7 +78,7 @@ export const EmployeeForm: React.FC<IEmployeeFormProps> = ({ employee, companies
                                 )}
                             </div>
 
-                            <div className="col-12 md:col-6">
+                            <div className="col-12">
                                 <label htmlFor="phone">Phone</label>
                                 <InputText
                                     id="phone"
@@ -89,7 +89,7 @@ export const EmployeeForm: React.FC<IEmployeeFormProps> = ({ employee, companies
                                 />
                             </div>
 
-                            <div className="col-12 md:col-6">
+                            <div className="col-12">
                                 <label htmlFor="jobTitle">Job Title</label>
                                 <InputText
                                     id="jobTitle"
@@ -100,7 +100,7 @@ export const EmployeeForm: React.FC<IEmployeeFormProps> = ({ employee, companies
                                 />
                             </div>
 
-                            <div className="col-12 md:col-6">
+                            <div className="col-12">
                                 <label htmlFor="companyID">Company</label>
                                 <Dropdown
                                     id="companyID"

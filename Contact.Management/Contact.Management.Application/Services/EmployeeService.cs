@@ -57,7 +57,7 @@ namespace Contact.Management.Application.Services
             return result;
         }
 
-        public async Task<IReadOnlyList<EmployeeDto>> GetAll(string? search, int page = 1, int pageSize = 10)
+        public async Task<PageResult<EmployeeDto>> GetAll(string? search, int page = 1, int pageSize = 10)
         {
             var query = _unitOfWork.Repository<Employee>().GetQueryable();
 
@@ -66,7 +66,9 @@ namespace Contact.Management.Application.Services
                 query = query.Where(x => x.Name.Contains(search) || x.Email.Contains(search));
             }
 
-            var result = query
+            var totalCount = query.Count();
+
+            var data = query
                 .OrderByDescending(x => x.CreatedAt)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -78,12 +80,19 @@ namespace Contact.Management.Application.Services
                     Phone = x.Phone,
                     JobTitle = x.JobTitle,
                     CompanyName = x.Company!.CompanyName,
+                    CompanyID = x.CompanyID,
                     IsActive = x.IsActive,
                     CreatedAt = x.CreatedAt
                 })
                 .ToList();
 
-            return await Task.FromResult(result);
+            return await Task.FromResult(new PageResult<EmployeeDto>
+            {
+                Data = data,
+                TotalCount = totalCount,
+                Page = page,
+                PageSize = pageSize
+            });
         }
 
         public async Task<bool> UpdateAsync(int id, UpdateEmployeeDto model)

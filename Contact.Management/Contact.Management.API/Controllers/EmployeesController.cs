@@ -16,7 +16,7 @@ namespace Contact.Management.API.Controllers
             _employeeService = employeeService;
         }
 
-        [HttpGet]
+        [HttpGet("")]
         public async Task<IActionResult> GetAll([FromQuery] string? search, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
             try
@@ -46,7 +46,7 @@ namespace Contact.Management.API.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("")]
         public async Task<IActionResult> Create([FromBody] CreateEmployeeDto model)
         {
             try
@@ -77,7 +77,7 @@ namespace Contact.Management.API.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try
